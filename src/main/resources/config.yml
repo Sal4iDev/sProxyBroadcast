@@ -1,0 +1,8 @@
+# Determines whether color codes (e.g., &a, &b) are allowed in messages
+allow-colors: true
+
+# Messages displayed to the user
+messages:
+  usage: "Usage: /tellmsg <message>"
+  sent: "Message sent to all servers."
+  no-players: "No players online. Unable to send the message to other servers."

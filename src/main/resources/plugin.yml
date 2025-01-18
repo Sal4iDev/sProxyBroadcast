@@ -1,0 +1,16 @@
+name: sProxyBroadcast
+version: '${version}'
+main: com.sal4i.sproxybroadcast.SProxyBroadcast
+api-version: '1.13'
+authors: [ Sal4iDev ]
+
+commands:
+  tellmsg:
+    description: Broadcast a message to all servers.
+    usage: /tellmsg <message>
+    permission: key.sendmsg
+
+permissions:
+  key.sendmsg:
+    description: Allows the player or console to use /tellmsg.
+    default: op
