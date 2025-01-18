@@ -18,7 +18,7 @@ settings:
 ```yaml
 # Determines whether color codes (e.g., &a, &b) are allowed in messages
 allow-colors: true
-
+permission: key.seemsg
 # Messages displayed to the user
 messages:
   usage: "Usage: /tellmsg <message>"
