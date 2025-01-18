@@ -79,7 +79,10 @@ public class BroadcastManager implements PluginMessageListener {
      */
     public void broadcastMessage(String message) {
         boolean allowColors = plugin.getConfig().getBoolean("allow-colors", true);
-        Bukkit.getOnlinePlayers().forEach(p -> p.sendMessage(allowColors
+        Bukkit.getOnlinePlayers()
+                .stream()
+                .filter(p -> p.hasPermission(plugin.getConfig().getString("permission", "key.seemsg")))
+                .forEach(p -> p.sendMessage(allowColors
                 ? ChatColor.translateAlternateColorCodes('&', message)
                 : message));
     }
